@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "singularName": "task",
+    "pluralName": "tasks",
+    "displayName": "Task",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "tasks"
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "waiting_to_pick"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "est_cost": {
+      "type": "string"
+    },
+    "vat_fee": {
+      "type": "string",
+      "default": "50000"
+    },
+    "fee": {
+      "type": "string"
+    },
+    "replace_part": {
+      "type": "json"
+    },
+    "rejected_reason": {
+      "type": "string"
+    },
+    "expected_note": {
+      "type": "string"
+    }
+  }
+}
