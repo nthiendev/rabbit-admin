@@ -385,12 +385,14 @@ export interface ApiTaskTask extends Schema.CollectionType {
       Attribute.DefaultTo<'waiting_to_pick'>;
     address: Attribute.String & Attribute.Required;
     phone: Attribute.String & Attribute.Required;
-    est_cost: Attribute.String;
-    vat_fee: Attribute.String & Attribute.DefaultTo<'50000'>;
-    fee: Attribute.String;
-    replace_part: Attribute.JSON;
     rejected_reason: Attribute.String;
     expected_note: Attribute.String;
+    replace_part: Attribute.String;
+    description: Attribute.String;
+    fee: Attribute.BigInteger;
+    replace_part_cost: Attribute.BigInteger;
+    total_price: Attribute.BigInteger;
+    work_hour: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

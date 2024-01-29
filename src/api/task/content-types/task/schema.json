@@ -35,24 +35,30 @@
       "type": "string",
       "required": true
     },
-    "est_cost": {
-      "type": "string"
-    },
-    "vat_fee": {
-      "type": "string",
-      "default": "50000"
-    },
-    "fee": {
-      "type": "string"
-    },
-    "replace_part": {
-      "type": "json"
-    },
     "rejected_reason": {
       "type": "string"
     },
     "expected_note": {
       "type": "string"
+    },
+    "replace_part": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "fee": {
+      "type": "biginteger"
+    },
+    "replace_part_cost": {
+      "type": "biginteger"
+    },
+    "total_price": {
+      "type": "biginteger"
+    },
+    "work_hour": {
+      "type": "integer"
     }
   }
 }
